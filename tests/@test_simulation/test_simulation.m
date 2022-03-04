@@ -6,7 +6,7 @@ classdef test_simulation < matlab.unittest.TestCase
     end
     
     methods (Test)
-        run(testCase)
+        runNominal(testCase)
     end
 end
 
