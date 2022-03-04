@@ -4,8 +4,8 @@ function runNominal(testCase)
 % Prepare simulation
 in = Simulink.SimulationInput("sldemo_fuelsys_dd");
 % Configure simulation
-in = in.setModelParameter("SimulationMode",'accelerator');
+in = in.setModelParameter("StopTime",testCase.stopTime);
 in = in.setModelParameter("Profile",'on');
 % Run simuation
-out = testCase.verifyWarningFree(@() in.sim);
+testCase.verifyWarningFree(@() in.sim);
 end
