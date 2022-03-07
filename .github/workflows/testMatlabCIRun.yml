@@ -38,6 +38,5 @@ jobs:
         uses: matlab-actions/run-command@v1
         with: 
             command: |
-              openProject('MATLABGitHubWorkstep.prj'), 
               ci.test()
       
