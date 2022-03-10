@@ -41,12 +41,12 @@ jobs:
       - name: build
         uses: matlab-actions/run-command@v1
         with: 
-            command: ci.test();
+            command: ci.test();dir
             
       # Save artifacts
       - name: Download all workflow run artifacts
         uses: actions/download-artifact@v2
         with:
-          path: ${{ github.workspace }}/_build
+          path: ${{ github.workspace }}/../_build
           name: ${{ github.run_number }}
       
