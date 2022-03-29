@@ -41,7 +41,7 @@ jobs:
       - name: build
         uses: matlab-actions/run-tests@v1
         with: 
-            select-by-folder: test/@test_simulation
+            select-by-folder: test
             
       # Save artifacts
       - name: Download all workflow run artifacts
