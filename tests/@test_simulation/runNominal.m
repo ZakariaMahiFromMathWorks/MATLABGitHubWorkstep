@@ -12,5 +12,5 @@ in = Simulink.SimulationInput(testCase.modelName);
 in = in.setModelParameter("StopTime",testCase.stopTime);
 in = in.setModelParameter("Profile",'on');
 % Run simuation
-testCase.verifyWarningFree(@() in.sim);
+testCase.assumeWarningFree(@() in.sim);
 end
